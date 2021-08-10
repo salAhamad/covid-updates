@@ -44,7 +44,6 @@ function Covid() {
                     }
                 </div>
             </div>
-
         </>
     )
 }

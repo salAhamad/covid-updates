@@ -11,7 +11,7 @@ function InterNationalCovidUpdate() {
         try {
             const res = await axios("https://api.covid19api.com/summary");
             setInternationalData(res.data.Countries);
-            console.log(res.data.Countries[0]);
+            console.log(res.data.Countries);
         } catch (error) {
             console.log(error);
         }
@@ -21,7 +21,6 @@ function InterNationalCovidUpdate() {
 
     return (
         <div>
-            {/* {Header} */}
             <DateTime headingTextData={headingText} />
             <div className="container">
                 <table className="table table-bordered table-hover">
@@ -54,8 +53,7 @@ function InterNationalCovidUpdate() {
                         }
                     </tbody>
                 </table>
-            </div>
-                        
+            </div>                        
         </div>
 
     )

@@ -1,9 +1,8 @@
 import moment from 'moment';
-import React from 'react'
 
 function DateTime({headingTextData}) {
     const currentDate = moment().format("DD-MM-YYYY");
-    const currentTime = moment().format("HH:MM");
+    const currentTime = moment().format("HH:MM a");
     // let time = new Date().toLocaleTimeString();
 
     return (

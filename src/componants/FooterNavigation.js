@@ -16,6 +16,10 @@ function FooterNavigation() {
             navMenu: "International Covid19 Updates",
             navLink: "international-covid-updates"
         },
+        {
+            navMenu: "Covid-2",
+            navLink: "covid-2"
+        },
     ]
     const [active, setActive] = useState(false);
     return (
