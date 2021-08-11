@@ -20,10 +20,14 @@ function FooterNavigation() {
             navMenu: "Covid-2",
             navLink: "covid-2"
         },
+        {
+            navMenu: "Json Placebolder",
+            navLink: "json-placeholder"
+        },
     ]
     const [active, setActive] = useState(false);
     return (
-        <footer className="footerNav">
+        <footer className="footerNav border-top">
             <nav className="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-center">
                 <ul className="navbar-nav">
                     {
