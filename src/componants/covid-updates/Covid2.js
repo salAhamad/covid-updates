@@ -9,7 +9,6 @@ function Covid2() {
         axios.get("https://api.covid19india.org/v4/min/timeseries.min.json").then(response =>{
             const apiUpdated = response.data;
             setCovidData(apiUpdated);
-            console.log(apiUpdated);
         }).catch(error => console.log(error));
     }
     useEffect(() => apiUpdatedData(), []);
@@ -23,21 +22,16 @@ function Covid2() {
                         <tr>
                             <th>#</th>
                             <th>Country</th>
-                            <th>Country Code</th>
-                            <th>Updated Date</th>
-                            <th>New Confirmed</th>
-                            <th>Total Confirmed</th>
-                            <th>Total Deaths</th>
-                            <th>New Recovered</th>
+                            <th>Dates</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            covidData.map((e, i) => {
+                             Object.keys(covidData).map((keys, i) => {
                                 return <tr key={i}>
                                     <td>{i}</td>
-                                    <th>{i}</th>
-                                </tr>        
+                                    <th>{keys}</th>
+                                </tr>
                             })
                         }
                     </tbody>
